@@ -1,4 +1,4 @@
-#1 Finding Programs in the PATH
+# 1 Finding Programs in the PATH
 #!/bin/bash
 # inpath--Verifies that a specified program is either valid as is
 #   or can be found in the PATH directory list

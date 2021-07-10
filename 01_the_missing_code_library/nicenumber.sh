@@ -9,8 +9,14 @@ nicenumber() {
   # Note that we assume that '.' is the decicmal separator in the INPUT value
   #   to this script. The decimal separator in the output value is '.' unless
   #   specified by the user with the -d flag.
-  integer=$(echo $1 | cut -d. -f1)  # Left of the decimal
-  decimal=$(echo $1 | cut -d. -f2)  # Right of the decimal
+  separator="$(echo $1 | sed 's/[[:digit:]]//g')"
+  if [ ! -z "$separator" -a "$separator" != "$DD" ] ; then
+    echo "$0: Unknown decimal separator $separator encountered." >&2
+    exit 1
+  fi
+
+  integer=$(echo $1 | cut -d$DD -f1)  # Left of the decimal
+  decimal=$(echo $1 | cut -d$DD -f2)  # Right of the decimal
 
   # Check if number has more than the integer part.
   if [ "$decimal" != "$1" ] ; then

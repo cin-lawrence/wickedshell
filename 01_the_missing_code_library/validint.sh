@@ -33,13 +33,15 @@ validint()
   fi
 
   # Is the input less than the minimum value?
-  if [ ! -z $min -a "$number" -lt "$min" ] ; then
+  # if [ ! -z $min -a "$number" -lt "$min" ] ; then
+  if [ ! -z $min ] && [ "$number" -lt "$min" ] ; then
     echo "Your value is too small: smallest acceptable value if $min." >&2
     return 1
   fi
 
   # Is the input greater than the maximum value?
-  if [ ! -z $max -a "$number" -gt "$max" ] ; then
+  # if [ ! -z $max -a "$number" -gt "$max" ] ; then
+  if [ ! -z $max ] && [ "$number" -gt "$max" ] ; then
     echo "Your value is too big: largest acceptable value is $max." >&2
     return 1
   fi
@@ -48,6 +50,6 @@ validint()
 }
 
 # Input validation
-if validint "$1" "$2" "$3" ; then
-  echo "Input is a valid integer within your constraints."
-fi
+# if validint "$1" "$2" "$3" ; then
+#   echo "Input is a valid integer within your constraints."
+# fi

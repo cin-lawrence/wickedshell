@@ -20,15 +20,15 @@ validAlphanum()
 # BEGIN MAIN SCRIPT--DELETE OR COMMENT OUT EVERYTHING BELOW THIS LINE IF
 #   YOU WANT TO INCLUDE THIS IN OTHER SCRIPTS.
 # ===============
-/bin/echo -n "Enter input: "
-read input
-
-# Input validation
-if ! validAlphanum "$input" ; then
-  echo "Please enter only letters and numbers." >&2
-  exit 1
-else
-  echo "Input is valid."
-fi
-
-exit 0
+# /bin/echo -n "Enter input: "
+# read input
+#
+# # Input validation
+# if ! validAlphanum "$input" ; then
+#   echo "Please enter only letters and numbers." >&2
+#   exit 1
+# else
+#   echo "Input is valid."
+# fi
+#
+# exit 0

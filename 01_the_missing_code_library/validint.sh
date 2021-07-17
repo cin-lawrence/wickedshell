@@ -1,6 +1,20 @@
 # Validating Integer Input
 #!/bin/bash
 # validint--Validates integer input, allowing negative integers too
+validnum()
+{
+  # Validate arg: returns 0 if all upper+lower+digits; 1 otherwise
+
+  # Remove all unacceptable chars.
+  validchars="$(echo $1 | sed -e 's/[^0-9]//g')"
+
+  if [ "$validchars" = "$1" ] ; then
+    return 0
+  else
+    return 1
+  fi
+}
+
 
 validint()
 {
@@ -13,6 +27,11 @@ validint()
 
   if [ -z $number ] ; then
     echo "You didn't enter anything. Please enter a number." >&2
+    return 1
+  fi
+
+  if ! validnum $number ; then
+    echo "You didn't enter a number. Please enter a number." >&2
     return 1
   fi
 

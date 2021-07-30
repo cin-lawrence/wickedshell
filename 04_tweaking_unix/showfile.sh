@@ -3,7 +3,7 @@
 
 # showfile--Shows the contents of a file, including additional useful info
 width=72
-fmt="$bash ../02_improving_on_user_commands/fmt.sh"
+fmt="bash ../02_improving_on_user_commands/fmt.sh"
 
 for input
 do

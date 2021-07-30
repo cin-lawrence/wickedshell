@@ -4,7 +4,7 @@
 # toolong--Feeds the fmt command only those lines in the input stream
 #   that are longer than the specified length
 width=72
-fmt="$bash ../02_improving_on_user_commands/fmt.sh"
+fmt="bash ../02_improving_on_user_commands/fmt.sh"
 
 if [ ! -r "$1" ] ; then
   echo "Cannot read file $1" >&2

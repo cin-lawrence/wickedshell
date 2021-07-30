@@ -1,0 +1,6 @@
+# 44 Cleaning Up After Guests Leave
+#!/bin/bash
+#
+# fixguest--Cleans up the guest account during the logout process
+#    Don't trust environmental variables: reference read-only sources.
+iam="$(id -in)"

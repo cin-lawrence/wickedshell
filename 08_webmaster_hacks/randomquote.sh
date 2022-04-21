@@ -2,8 +2,8 @@
 
 # 68 Displaying Random Text
 # randomtext--Given a one-line-per-entry datafile,
-#   randomly picks one line and displays ita. Best used
-#   as aan SSI call within a web page.
+#   randomly picks one line and displays it. Best used
+#   as an SSI call within a web page.
 awkscript="/tmp/randomquote.awk.$$"
 
 if [ $# -ne 1 ] ; then
